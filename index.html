@@ -114,7 +114,7 @@
             </svg>
           </div>
           <h3>Frete Grátis</h3>
-          <p>ㅤ</p>
+          <p></p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -123,7 +123,7 @@
             </svg>
           </div>
           <h3>Garantia Premium</h3>
-          <p>ㅤ</p>
+          <p></p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -133,7 +133,7 @@
             </svg>
           </div>
           <h3>Troca Fácil</h3>
-          <p>ㅤ</p>
+          <p></p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -143,7 +143,7 @@
             </svg>
           </div>
           <h3>Parcelamento</h3>
-          <p>ㅤ</p>
+          <p></p>
         </div>
       </div>
     </div>
@@ -159,9 +159,9 @@
         </div>
         <div class="filter-buttons">
           <button class="filter-btn active">Todos</button>
-          <button class="filter-btn">ㅤ</button>
-          <button class="filter-btn">ㅤ</button>
-          <button class="filter-btn">ㅤ</button>
+          <button class="filter-btn">1</button>
+          <button class="filter-btn">2</button>
+          <button class="filter-btn">3</button>
         </div>
       </div>
       
@@ -514,9 +514,9 @@
           <ul>
             <li><a href="#">SAPATOS</a></li>
             <li><a href="#"></a></li>
-            <li><a href="#">ㅤ</a></li>
-            <li><a href="#">ㅤ</a></li>
-            <li><a href="#">ㅤ</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
           </ul>
         </div>
 
@@ -525,9 +525,9 @@
           <ul>
             <li><a href="#">FALCONS STORE</a></li>
             <li><a href="#"></a></li>
-            <li><a href="#">ㅤ</a></li>
-            <li><a href="#">ㅤ</a></li>
-            <li><a href="#">ㅤ</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
           </ul>
         </div>
 
@@ -536,9 +536,9 @@
           <ul>
             <li><a href="#">Central de Ajuda</a></li>
             <li><a href="#"></a></li>
-            <li><a href="#">ㅤ</a></li>
-            <li><a href="#">ㅤ</a></li>
-            <li><a href="#">ㅤ</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
           </ul>
         </div>
       </div>
@@ -554,48 +554,6 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    const menuBtn = document.querySelector('.menu-btn');
-    const nav = document.querySelector('.nav-desktop');
-    
-    menuBtn.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-
-    // Header scroll effect
-    const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    // Newsletter form
-    const newsletterForm = document.getElementById('newsletter-form');
-    newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const input = newsletterForm.querySelector('input');
-      alert('Obrigado por se inscrever! Você receberá nossas novidades em: ' + input.value);
-      input.value = '';
-    });
-
-    // Wishlist toggle
-    document.querySelectorAll('.wishlist-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.classList.toggle('active');
-      });
-    });
-
-    // Filter buttons
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      });
-    });
-  </script>
+  
 </body>
 </html>

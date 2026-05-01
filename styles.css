@@ -1,12 +1,9 @@
-/* ===== RESET & BASE ===== */
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+/* ===== estilos globais (variaveis) ===== */
 :root {
   --color-bg: #0a0a0a;
   --color-bg-secondary: #141414;
@@ -19,8 +16,8 @@
   --color-gray-800: #262626;
   --color-gray-900: #171717;
   --color-accent: #ffffff;
-  --font-display: 'Bebas Neue', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Inter", sans-serif;
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
@@ -74,7 +71,9 @@ button {
   right: 0;
   z-index: 1000;
   background: transparent;
-  transition: background var(--transition-normal), backdrop-filter var(--transition-normal);
+  transition:
+    background var(--transition-normal),
+    backdrop-filter var(--transition-normal);
 }
 
 .header.scrolled {
@@ -126,7 +125,7 @@ button {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -206,7 +205,11 @@ button {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
   z-index: 1;
 }
 
@@ -231,8 +234,8 @@ button {
 .hero-badge {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 100px;
   font-size: 0.75rem;
   font-weight: 600;
@@ -297,7 +300,7 @@ button {
 .btn-primary:hover {
   background: var(--color-gray-100);
   transform: translateY(-2px);
-  box-shadow: 0 10px 40px rgba(255,255,255,0.2);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
 }
 
 .btn-secondary {
@@ -308,7 +311,7 @@ button {
 
 .btn-secondary:hover {
   border-color: var(--color-white);
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .btn-outline {
@@ -385,17 +388,6 @@ button {
   }
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  40% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-  60% {
-    transform: translateX(-50%) translateY(-5px);
-  }
-}
 
 /* ===== FEATURES ===== */
 .features {
@@ -535,14 +527,18 @@ button {
 .product-card:hover {
   border-color: var(--color-gray-700);
   transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 .product-image-wrapper {
   position: relative;
   aspect-ratio: 1;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--color-gray-900) 0%, var(--color-bg) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-gray-900) 0%,
+    var(--color-bg) 100%
+  );
 }
 
 .product-image {
@@ -588,7 +584,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   border-radius: 50%;
   color: var(--color-white);
@@ -614,7 +610,7 @@ button {
 .product-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -683,7 +679,7 @@ button {
 
 .add-to-cart-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
 
 .add-to-cart-btn svg {
@@ -818,7 +814,7 @@ button {
 
 .newsletter-input:focus {
   border-color: var(--color-white);
-  box-shadow: 0 0 0 3px rgba(255,255,255,0.1);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
 .form-note {
@@ -935,58 +931,8 @@ button {
   color: var(--color-white);
 }
 
-/* ===== RESPONSIVE ===== */
-@media (min-width: 640px) {
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* ===== RESPONSIVIDADE ===== */
 
-  .form-group {
-    flex-direction: row;
-  }
-
-  .newsletter-input {
-    flex: 1;
-  }
-
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 768px) {
-  .nav-desktop {
-    display: flex;
-  }
-
-  .menu-btn {
-    display: none;
-  }
-
-  .features-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .stat-divider {
-    display: block;
-  }
-
-  .section-header {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  }
-
-  .footer-bottom {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
-}
 
 @media (min-width: 1024px) {
   .products-grid {
@@ -1009,19 +955,4 @@ button {
   }
 }
 
-/* ===== MOBILE MENU ===== */
-@media (max-width: 767px) {
-  .nav-desktop.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgba(10, 10, 10, 0.98);
-    backdrop-filter: blur(20px);
-    padding: 2rem 1.5rem;
-    border-bottom: 1px solid var(--color-gray-800);
-    gap: 1.5rem;
-  }
-}
+
